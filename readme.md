@@ -140,3 +140,5 @@ List storage class in cluster:
 ```cmd
 kubectl get storageclass
 ```
+
+In folder **longhorn** exists claim volume class longorh and app using longhorn
