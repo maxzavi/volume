@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: demovol
+spec:
+  serviceName: demovol
+  selector:
+    matchLabels:
+      app: demovol
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: demovol
+    spec:
+      containers:
+        - name: demovol
+          image: alpine
+          command: ["tail","-f","/dev/null"]
