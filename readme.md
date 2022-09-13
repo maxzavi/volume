@@ -62,7 +62,7 @@ Set namespace in kubernetes:
 kubectl config set-context --current --namespace=ns-demovol 
 ```
 
-Create a statefulSet without volume, using not-pv-app.yml
+Create a statefulSet without volume, using not-pv-app.yml, in statefulSet, pod names: pod-0 .. n, sample **demovol-0**
 
 ```cmd
 kubectl apply -f not-pv-app.yml
@@ -133,3 +133,10 @@ Rewiew pods, exec inside and test with file mydata.txt, delete pod and check per
 **storageClassName: hostpath** create a volume on each node hosts the pod, each volume per host is independent.
 
 
+### Storage Class - Kubernetes
+
+List storage class in cluster:
+
+```cmd
+kubectl get storageclass
+```
